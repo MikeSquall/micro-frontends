@@ -2,8 +2,8 @@
 
 import { BlueService } from '../team-blue/BlueService.js';
 import { RedService } from '../team-red/RedService.js';
-import '../../dist/scalecube.js';
 import {GreenService} from "../team-green/GreenService.js";
+import '../../dist/scalecube.js';
 
 const builder = scalecube.Microservices.builder();
 
