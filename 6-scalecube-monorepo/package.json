@@ -1,0 +1,11 @@
+{
+  "name": "6-scalecube-monorepo",
+  "version": "0.0.0",
+  "description": "Scalecube example in a monorepo",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.10.6"
+  }
+}
