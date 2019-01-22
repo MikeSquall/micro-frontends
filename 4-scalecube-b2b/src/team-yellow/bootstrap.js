@@ -1,4 +1,4 @@
-
+import '@babel/polyfill';
 
 import { BlueService } from '../team-blue/BlueService.js';
 import { RedService } from '../team-red/RedService.js';

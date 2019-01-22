@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactWebComponent from 'react-web-component';
 import { BlueService } from '../api.js';
 import '../../dist/scalecube.js';
 import { RedService } from "../api.js";
@@ -21,15 +21,15 @@ const host = 'http://localhost:8080/src/';
 
 class Recommendations extends React.Component {
   render() {
-    console.log('lolo');
 
-    return (
-      <>
-      <h3>Related Products</h3>
-      {this.props.recommendations.map(
-        id => <img src={`${host}/team-green/images/reco_${id}.jpg`} alt={`Reco ${id}`}/>
-      )}
-    </>;
+    return 'Hello';
+
+    // return <div>
+    //   <h3>Related Products</h3>
+    //   {this.props.recommendations.map(
+    //     id => <img src="{host}/team-green/images/reco_${id}.jpg"} alt={"Reco ${id}"}/>
+    //   )}
+    // </React.Fragment>`;
   }
 }
 
@@ -41,8 +41,7 @@ export class GreenRecos extends HTMLElement {
   }
 
   render(sku) {
-    console.log('A');
-    return <Recommendations recommendations={recos[sku] || []}/>;
+    ReactWebComponent.create(<Recommendations recommendations={recos[sku] || []}/>, 'green-recos')
   }
 
   disconnectedCallback() {}
